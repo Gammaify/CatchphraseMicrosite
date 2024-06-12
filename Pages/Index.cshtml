@@ -1,0 +1,156 @@
+﻿@page 
+@model IndexModel
+@{
+    Layout = "_CatchphraseLayout";
+    ViewData["Title"] = "Homepage";
+    string ImageServerURL = "https://media.gingerfox.co.uk/CatchphraseMicroSite";
+}
+<link href="~/css/index.css" rel="stylesheet" />
+<script src="~/js/index.js"></script>
+<link href="~/lib/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet" />
+<link href="~/lib/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet" />
+<script src="~/lib/owlcarousel2/owl.carousel.min.js"></script>
+<div id="BuyNowBtnBanner" class="bannerContainer">
+   @* <div class="h1BannerContainer">
+        <h1 class="bannerH1">A GAME OF TRUST AND TREACHERY...</h1>
+    </div>
+    <div class="h2BannerContainer">
+        <h2 class="bannerH2">DO YOU HAVE WHAT IT TAKES TO PLAY?</h2>
+    </div>*@
+
+    <img class="desktopVersion" src="@ImageServerURL/CatchPhrase_web_Hero Banner.png" />
+    <img class="mobileVersion" src="@ImageServerURL/CatchPhrase_Mob_Hero Banner.png" />
+    @*<a id="BuyNowBtnBanner" class="BuyNowBtn" href="/RedirectToGingerFox"><div id="ProductPrice"></div>Buy Now</a>*@
+</div>
+
+<div class="reviewBanner">
+    <img src="@ImageServerURL/Review Stars_WEB.png">
+   @* <div class="starContainer">
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_FULL.png" />
+        <img src="@ImageServerURL/STAR_PURPLE_HALF.png" />
+    </div>
+    <p class="totalReviews">(74 Reviews)</p>
+    <p class="reviewMobileText mobileVersion">RATED 5 STARS ON AMAZON FROM 89 REVIEWS</p>*@
+</div>
+<div id="InTheBox" class="InTheBoxContainer">
+
+    <div class="InTheBoxInfoContainer container">
+        <div class="boxContentsContainer">
+            <h2>What's In The Box?</h2>
+           @* <p>Catch Phrase Card Game Box Includes:</p>*@
+            <ul>
+                <li class="inTheBoxItem1">90 Double-Sided Catchphrase Cards,</li>
+                <li class="inTheBoxItem2">25 Bonus Catchphrase Cards,</li>
+                <li class="inTheBoxItem3">25 Bonus Video Catchphrase QR Codes,</li>
+                <li class="inTheBoxItem4">Buzzer Card,</li>
+                <li class="inTheBoxItem5">Bonus Catchphrase Reveal Sleeve & Card,</li>
+                <li class="inTheBoxItem6">Easy-To-Follow Rules,</li>
+                <li class="inTheBoxItem7">Access To Bonus Digital Features.</li>
+            </ul>
+        </div>
+        <img class="desktopVersion" src="@ImageServerURL/WHATS IN THE BOX_WEB.png" />
+        <img class="mobileVersion" src="@ImageServerURL/WHATS IN THE BOX_MOB.png" />
+
+
+    </div>
+</div>
+<div id="Reviews" class="reviewContainer">
+    <h2>Reviews</h2>
+    <div class="reviewCarousel owl-carousel">
+            <div class="review">
+                <img src="@ImageServerURL/REVIEW 1.png" />
+            </div>
+            <div class="review">
+                <img src="@ImageServerURL/REVIEW 2.png" />
+            </div>
+             <div class="review">
+                <img src="@ImageServerURL/REVIEW 3.png" />
+            </div>
+            <div class="review">
+                <img src="@ImageServerURL/REVIEW 4.png" />
+            </div>
+            <div class="review">
+                <img src="@ImageServerURL/REVIEW 5.png" />
+            </div>
+            
+        </div>
+</div>
+<div id="HowToPlay" class="VideoContainer">
+    <h4>How To Play</h4>
+
+    <div class="YTContainer">
+        <div id="player"></div>
+    </div>
+
+</div>
+<div class="MidBanner">
+    <img class="mobileVersion" src="@ImageServerURL/MOB_Breaker Banner.png" />
+    <img class="desktopVersion" src="@ImageServerURL/Breaker Banner_WEB.png" />
+</div>
+<div id="BuyFromUs" class="RTBFUContainer">
+    <h4>WHY BUY FROM US</h4>
+    <div class="cardContainer">
+        <img class="desktopVersion" src="@ImageServerURL/WHY BUY FROM US_WEB.png" />
+        <img class="mobileVersion" src="@ImageServerURL/WHY BUY FROM US_MOB.png" />
+    </div>
+</div>
+<div class="LifeStyleSlider owl-carousel">
+    <div class="lifeStyleImg">
+        
+        <img class="LifestyleImg1Src" src="@ImageServerURL/1.jpg" />
+    </div>
+    <div class="lifeStyleImg">
+       
+        <img class="LifestyleImg2Src" src="@ImageServerURL/2.jpg" />
+    </div>
+    <div class="lifeStyleImg">
+       
+        <img class="LifestyleImg3Src" src="@ImageServerURL/3.jpg" />
+    </div>
+    <div class="lifeStyleImg">
+       
+        <img class="LifestyleImg4Src" src="@ImageServerURL/4.jpg" />
+    </div>
+    <div class="lifeStyleImg">
+
+        <img class="LifestyleImg4Src" src="@ImageServerURL/5.jpg" />
+    </div>
+</div>
+<div id="FAQs" class="FAQContainer">
+    <h2 class="desktopVersion">Frequently Asked Questions</h2>
+    <h2 class="mobileVersion">FAQs</h2>
+    <div class="FAQCardContainer">
+        <div id="q1Card" class="FAQCard">
+            <p id="q1" class="FAQText">Q. How Much Does Delivery Cost?</p>
+            <p id="a1" class="FAQAnswerText">Standard delivery of 2-3 working days is free. Next-day delivery is available at a small cost. Read more <a href="https://www.gingerfox.co.uk/policies/shipping-policy">here</a>.</p>
+        </div>
+        <div id="q2Card" class="FAQCard">
+            <p id="q2" class="FAQText">Q. What Is The Minimum Age For This Game?</p>
+            <p id="a2" class="FAQAnswerText">We think this is a great game for players aged 12 years and over.</p>
+        </div>
+    </div>
+    <div class="FAQCardContainer">
+        <div id="q3Card" class="FAQCard">
+            <p id="q3" class="FAQText">Q. When Will I Recieve My Item?</p>
+            <p id="a3" class="FAQAnswerText">A tracking link will be emailed to you once your order has been shipped. <a href="https://www.gingerfox.co.uk/pages/contact-us">Contact us</a> if you need more info.</p>
+        </div>
+        <div id="q4Card" class="FAQCard">
+            <p id="q4" class="FAQText">Q. How Many People Can Play?</p>
+            <p id="a4" class="FAQAnswerText">We recommend 3 or more players. For larger groups, this game can easily be played in teams.</p>
+        </div>
+    </div>
+    <div class="FAQCardContainer">
+        <div id="q5Card" class="FAQCard">
+            <p id="q5" class="FAQText">Q. How do I access the digital content?</p>
+            <p id="a5" class="FAQAnswerText">Scan the QR Codes within the game with a smart device to access the digital Bonus Catchphrases.</p>
+        </div>
+        <div id="q6Card" class="FAQCard">
+            <p id="q6" class="FAQText">Q. What do I do if I lose a piece of the game?</p>
+            <p id="a6" class="FAQAnswerText">We understand how pieces can get misplaced or lost. <a href="https://www.gingerfox.co.uk/pages/contact-us">Contact us</a> if you need a replacement part.</p>
+        </div>
+    </div>
+
+</div>

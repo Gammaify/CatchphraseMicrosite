@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+@{
+    string ImageServerURL = "https://media.gingerfox.co.uk/CatchphraseMicroSite";
+    string tiktokURL = "@gingerfoxuk";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Catch Phrase</title>
+    <link href="https://use.typekit.net/thr0udu.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/CatchphraseLayout.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="icon" type="image/png" sizes="32x32" href="@ImageServerURL/favicon.png">
+
+    <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js" asp-append-version="true"></script>
+    <script src="~/js/Shopify.js" asp-append-version="true"></script>
+    <script src="~/js/CatchphraseLayout.js" asp-append-version="true"></script>
+    <script src="~/lib/js-cookie/js.cookie.js" asp-append-version="true"></script>
+</head>
+
+
+<body>
+    <wrapper class="d-flex flex-column min-vh-100">
+
+        <div class="headerContainer">
+            @*<a class="greatestHitsLink" href="https://planetradio.co.uk/greatest-hits/station/on-air/greatest-hits-radio-welcome/">
+                <div class="greatestHitsContainer">
+
+                        <p>Listen to Ken weekdays from 10am</p>
+                        <img src="@ImageServerURL/GHR_Master_Logo_Horiz_WhiteOnly-01-01.png" />
+                
+                
+                </div>
+            </a>*@
+            <header>
+               
+                <div class="headerMainContainer container">
+                    <a class="Logo" href="/">
+                        <img src="@ImageServerURL/Catchphrase_Logo.png" />
+                    </a>
+                    <ul class="Navigation">
+                        <li class="InBoxBtn">What's In The Box?</li>
+                        <li class="HowToPlayBtn">How To Play</li>
+                        <li class="ReviewsBtn">Reviews</li>
+                        <li class="FAQsBtn">FAQs</li>
+                    </ul>
+                    <div id="BuyNowBtn" class="BuyNowBtn">
+                        <img class="desktopVersion" src="@ImageServerURL/Button - Buy Now.png" />
+                        <img class="mobileVersion" src="@ImageServerURL/Button - Buy Now_MOB.png" />
+                    </div>
+                    @*<button id="BuyNowBtn" class="BuyNowBtn" type="button">Buy Now</button>*@
+                </div>
+                
+            </header>
+            
+            <div class="mobileNavContainer">
+                <ul>
+                    <li class="InBoxBtn">In The Box</li>
+                    <li class="HowToPlayBtn">How To Play</li>
+                    <li class="ReviewsBtn">Reviews</li>
+                    <li class="FAQsBtn">FAQs</li>
+                </ul>
+            </div>
+            
+            @*<div class="gameTypeContainer">
+                <p class="boardGameText purple">Board Game</p>
+                <label class="switch">
+
+                    <input type="checkbox" id="gameTypeCheck">
+                    <span class="slider round"></span>
+
+                </label>
+                <p class="cardGameText white">Card Game</p>
+            </div>*@
+        </div>
+        
+
+
+        <main role="main" id="main" class="flex-fill">
+            @RenderBody()
+        </main>
+
+        <footer>
+            <div class="footerContainer container">
+                <img class="Logo2" src="@ImageServerURL/Catchphrase_Logo.png" />
+                @*<img class="Logo3" src="@ImageServerURL/WWTBAM_LOGO.png" />*@
+                <ul class="footerList">
+                    <li><a href="https://www.gingerfox.co.uk/pages/contact-us">Contact Us</a></li>
+                    <li><a href="https://www.gingerfox.co.uk/policies/shipping-policy">Delivery & Returns</a></li>
+                    <li><a href="https://www.gingerfox.co.uk/policies/privacy-policy">Privacy Policy</a></li>
+                </ul>
+                <ul class="footerList">
+                    <li><a href="https://www.gingerfox.co.uk/policies/terms-of-service">Terms & Conditions</a></li>
+                    <li><a href="https://www.gingerfox.co.uk/pages/ethical-environmental-policy">Ethical & Environmental Policy</a></li>
+                    <li><a href="https://www.gingerfox.co.uk/pages/sustainability-promise">Sustainability Promise</a></li>
+                </ul>
+               <div class="socialContainer">
+                    <p>Follow Ginger Fox</p>
+                    <div class="socialIconContainer">
+                        <a target="_blank" href="https://twitter.com/GingerFox_UK">
+                            <img src="@ImageServerURL/twitter.png" />
+                        </a>
+                        <a href="https://www.facebook.com/GingerFoxUK/" target="_blank">
+                            <img src="@ImageServerURL/facebook.png" />
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/gingerfoxuk/?hl=en">
+                            <img src="@ImageServerURL/instagram.png" />
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCZSh6UQLU-A7rg6mFnpgYFA">
+                            <img src="@ImageServerURL/youtube.png" />
+                        </a>
+
+                        <a target="_blank" href="https://www.tiktok.com/@tiktokURL?lang=en">
+                            <img src="@ImageServerURL/tiktok.png" />
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <div class="copyrightContainer container">
+            <p>Catch Phrase is owned by Pasetta Productions, inc. Licensed by All3Media International Ltd.</p> 
+            <p>&copy; Catch Phrase Logo, imagery, and Mr Chips character &copy;@DateTime.Now.Year All3Media International Ltd and STV Studios Limited.</p>
+            <p>&copy;@DateTime.Now.Year Ginger Fox Games Ltd.</p>
+        </div>
+    </wrapper>
+    @await Component.InvokeAsync("CookieConsent", new
+    {
+    TrackingCookieNames = "Google Analytics"
+    })
+</body>
+
+</html>

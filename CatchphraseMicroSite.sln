@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchphraseMicroSite", "CatchphraseMicroSite.csproj", "{F379CD2F-2E38-40BB-879D-FA6187BE5C23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F379CD2F-2E38-40BB-879D-FA6187BE5C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F379CD2F-2E38-40BB-879D-FA6187BE5C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F379CD2F-2E38-40BB-879D-FA6187BE5C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F379CD2F-2E38-40BB-879D-FA6187BE5C23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC56B44E-8729-46B6-A7A5-F054E0692B24}
+	EndGlobalSection
+EndGlobal
